@@ -1,15 +1,17 @@
 import csv
 def main():
-    with open('user_features.csv', newline='') as csvfile:
+    with open('movie_features.csv', newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             #print("\""+row["Movie"]+"\"", end=", ")
-            print("{\""+row['User ID']+"\", ", end = "")
+            print("{\""+row['Movie']+"\", ", end = "")
             data = []
             
+            count = -1
             for i in row:
-                if i != "User ID" and i!= "User":
-                    data.append(int(float(row[i])*10000))
+                if row[i]=="1":
+                    data.append(count*1)
+                count += 1
             a = str(data)
             print((a.replace('[','{')).replace(']','}'),"}, ")
             
