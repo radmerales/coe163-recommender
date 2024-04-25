@@ -526,9 +526,9 @@ int main(){
     priority_queue<P, vector<P>, greater<P> >pq; 
     string input; cin>>input;
 
-    for(auto i: movieTitles){
+    for(auto movie: movieTitles){
         //cout<<i<<" "<<fma(input, i)<<endl;
-        pq.push({-fma(input, i), i});
+        pq.push({-fma(input, movie), movie});
     }
 
     for(int i=0;i<10;i++){
