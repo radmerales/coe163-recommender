@@ -26,7 +26,7 @@ We have the following variables for the c++ file.
 
 ### Optimizations
 
-Using the UvLE code runner, we get the following runtimes. [^1]
+The time shown below are in milliseconds. Using the UvLE code runner, we get the following runtimes. [^1]
 
 | Optimization | U18 | U6 | U36 | U88 |
 | ------------ | --- | -- | --- | --- |
