@@ -36,7 +36,7 @@ I have found another parallelizable function called transform_reduce. However, i
 
 | Optimization | U18 | U6 | U36 | U88 |
 | ------------ | --- | -- | --- | --- |
-| inner product | 1.195 | 1.190 | 1.250 | 1.080 |
+| inner product | 1.195 | 1.190 | 0.900 | 1.080 |
 | transform_reduce | 1.354 | 1.006 | 1.350 |1.305 | 
 
-There isn't really much of an improvement. 
+There isn't really much of an improvement. I think if the genre vector is larger. We would see a benifit in parallelization. 
