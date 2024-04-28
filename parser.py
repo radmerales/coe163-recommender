@@ -6,12 +6,12 @@ def generate_users():
         for row in reader:
             #print("\""+row["Movie"]+"\"", end=", ")
             print("{\""+row['User ID']+"\", ", end = "")
-            data = [0]
+            data = []
             
             count = -1
             for i in row:
                 if i!="User" and i!="User ID":
-                    data.append(int(float(row[i])*10000))
+                    data.append(int(row[i][2::]))
                 count += 1
             a = str(data)
             print((a.replace('[','{')).replace(']','}'),"}, ")
